@@ -278,6 +278,7 @@ function clearHighscores() {
   localStorage.removeItem("leaderboardArray");
   renderLeaderboard();
   unclearedQuestions = [];
+  chosenQuestions = [];
 }
 
 const backButton = document.querySelector("#back-button");
@@ -407,7 +408,7 @@ function getQuestions(remaining = false) {
   console.log(duplicates);*/
   chosenQuestions = remaining
     ? remainingQuestions.map((v) => v)
-    : uniqueQuestions.map((v) => v);
+    : questionLists.map((v) => v);
   console.log(chosenQuestions);
 
   let tqElem = document.querySelector("#total-question");

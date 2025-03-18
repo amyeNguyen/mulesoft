@@ -201,3 +201,7 @@ const uniqueQuestions = [
     wrongAns: ["More programming language options for API implementations","Tighter coupling of systems","A single-tier API architecture"]
     }
 ];
+
+questionLists
+  ? questionLists.push(...uniqueQuestions)
+  : (questionLists = uniqueQuestions);
